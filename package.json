@@ -2,10 +2,9 @@
   "name": "guitar-api",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "prestart": "npm run build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist || true",
