@@ -2,16 +2,15 @@
   "name": "guitar-api",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "server.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
-    "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "reinstall": "npm run clean && npm install",
-    "rebuild": "npm run clean && npm install && npm run build"
+    "clean": "rm -rf dist || true",
+    "build": "npm run clean && tsc && cp package.json dist/package.json && mkdir dist/temp && cd dist && zip -r Archive.zip . && cd ..",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +20,15 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
+    "@types/fs-extra": "^8.0.1",
     "@types/node": "^13.7.1",
+    "@types/shelljs": "^0.8.6",
+    "fs-extra": "^8.1.0",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
     "typescript": "^3.7.5"
   }
