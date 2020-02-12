@@ -5,7 +5,7 @@ const port = 8080; // default port to listen
 
 // define a route handler for the default home page
 app.get( "/", ( req, res ) => {
-    res.send( "Hello world!" );
+    res.send( "/api/v0");
 } );
 
 // start the Express server
