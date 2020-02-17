@@ -3,7 +3,7 @@ import { Sequelize } from 'sequelize-typescript';
 import { config } from './config/config';
 
 
-const envVariables = config.prod;
+const envVariables = config.dev;
 
 // sequelize instance
 export const sequelize = new Sequelize({

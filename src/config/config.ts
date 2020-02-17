@@ -13,7 +13,7 @@ export const config = {
             "host": "localhost",
             "username": "postgres",
             "password": "1234pswd",
-            "schema": "db_schema",
+            "schema": "customer_db",
             "dialect": "postgres"
         }
     }
