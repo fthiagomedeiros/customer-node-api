@@ -7,14 +7,5 @@ export const config = {
             "schema": process.env.DB_SCHEMA,
             "dialect": "postgres"
         }
-    },
-    "dev": {
-        "database": {
-            "host": "localhost",
-            "username": "postgres",
-            "password": "1234pswd",
-            "schema": "customer_db",
-            "dialect": "postgres"
-        }
     }
 };
