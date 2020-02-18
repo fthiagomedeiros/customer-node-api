@@ -1,6 +1,6 @@
 # Customer REST API
 
-Customer REST API is allows clients to register customers information. The project is basically an API.
+Customer REST API is allows clients to register customers information.
 
 ***
 ## Getting Setup
