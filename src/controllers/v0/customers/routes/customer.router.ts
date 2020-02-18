@@ -19,6 +19,19 @@ router.post('/', async (request: Request, response: Response) => {
 });
 
 
+router.post('/send_email', async (request: Request, response: Response) => {
+    const email = request.body.email;
+
+    let customer;
+    customer = await Customer.findByPk(email);
+    // tslint:disable-next-line:no-console
+    console.log('An email must be sent!' + customer);
+
+    response.send(customer);
+});
+
+
+
 router.get('/', async (request: Request, response: Response) => {
     const customers = await Customer.findAndCountAll({order: [['email', 'DESC']]})
     response.status(HTTP_OK).send(customers);

@@ -19,4 +19,7 @@ export class Customer extends Model<Customer> {
     @UpdatedAt
     public updatedAt: Date = new Date();
 
+    short() {
+        return this.email;
+    }
 }
